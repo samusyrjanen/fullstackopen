@@ -82,6 +82,14 @@ const App = () => {
           setNotificationMessage(null)
         }, 4000)
       })
+      .catch(error => {
+        setNotificationMessage(
+          `${error}`
+        )
+        setTimeout(() => {
+          setNotificationMessage(null)
+        }, 4000)
+      })
   }
 
   const deleteName = (event) => {
